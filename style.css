@@ -33,6 +33,10 @@ path{
     font-size: 5vw;
     font-size: 30px;
 }
+.table-conteiner{
+    width: 100%;
+    overflow-x:auto;
+}
 
 th{
     background-color: bisque;
@@ -45,6 +49,40 @@ td{
     padding: 5px 20px;
     min-width: 200px;
 }
+table.responsive {
+    width: 100%;
+  }
+  table.responsive td .label {
+    display: none;
+  }
+  
+  table.responsive th {
+    background-color: #ddd;
+  }
+  
+  table.second {
+    margin-top: 5em;
+  }
+  
+  @media screen and (max-width:640px) {
+    table.responsive thead {
+      display: none;
+    }
+    table.responsive tbody th,
+    table.responsive tbody td {
+      display: block;
+    }
+  
+    table.responsive td span {
+      display: block;
+    }
+    table.responsive td .label {
+        display: block;
+      background-color: #ddd;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
 
 /* @media (display-mode: fullscreen) {
     .header{
@@ -52,6 +90,14 @@ td{
     }
 } */
 @media (max-width: 1000px) {
+    th{
+        min-width: 50px;
+        padding: 5px 2px;
+    }
+    td{
+        min-width: 50px;
+        padding: 5px 2px;
+    }
     .header{
         width: 100%;
     }
