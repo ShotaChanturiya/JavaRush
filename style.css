@@ -15,14 +15,51 @@
     background-color: brown;
 }
 
-@media (display-mode: fullscreen) {
+.svg{
+    background-color: aqua;
+    color: blue;
+
+}
+path{
+    fill: blue;
+}
+
+.fon-div{
+    width: 300px;
+    height: 200px;
+    background-image: url('/src/old_bmw.jpg');
+}
+.main-header{
+    font-size: 5vw;
+    font-size: 30px;
+}
+
+th{
+    background-color: bisque;
+    text-align: center;
+    padding: 5px 20px;
+    min-width: 200px;
+}
+td{
+    text-align: center;
+    padding: 5px 20px;
+    min-width: 200px;
+}
+
+/* @media (display-mode: fullscreen) {
     .header{
         background-color: red;
     }
-}
+} */
 @media (max-width: 1000px) {
     .header{
         width: 100%;
+    }
+    .fon-div{
+        background-image: url('/src/BMW.jpg');
+    }
+    .main-header{
+        font-size: 14px;
     }
 }
 @media (max-width: 500px) {
