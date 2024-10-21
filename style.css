@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
 }
+:root {
+    --primary-color: #168537;
+    --font-family: Arial, sans-serif;
+    --headerBackground: red;
+    }
+.text{
+    color: var(--font-family);
+    font-family: var(--font-family);
+}
 .header{
     background-color: aqua;
     width: 1000px;
@@ -33,4 +42,61 @@
     .content{
       width: 100%;
     }
+}
+.input:disabled{
+    background-color: blue;
+}
+
+.input:focus{
+    background-color:red;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+.list{
+    counter-reset: 0;
+}
+.list-item{
+    counter-increment: my-counter 1;
+}
+.list-item::before{
+    content: '№ ' counter(my-counter) ' ';
+}
+.list-item::after{
+    content:'класс этого элемента  ' attr(class) ' ';
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    }
+
+
+input[type="checkbox"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-right: 10px;
+    }
+    input[type="checkbox"]:checked::before {
+    background-color: #007bff;
+    }
+.list-item:only-child{
+    color: red;
+}
+.list-item:not(:first-child):not(:last-child){
+   color: rgb(47, 0, 255);
+   font-size: large;
+}
+.text::selection{
+   color: yellow;
+}
+.text:hover::first-letter{
+    color: red;
 }
